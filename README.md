@@ -1,3 +1,3 @@
 PAL
 ===
-Hoi Lukas, Hoi Aurel.
+Hoi Pascal
