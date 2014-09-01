@@ -12,3 +12,7 @@ LB
 Ja, das isch eich e gueti Idee. Ich bring nur eclipse nid ganz suuber uf Windows... Es lauft zwar, aber es kennt nid all Befehl vom JFrame... Naja. Wird scho no iwie gah.
 --
 PS
+
+Ok
+Bringsch scho no here.
+LB
