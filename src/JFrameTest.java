@@ -6,6 +6,7 @@ import javax.swing.*;
 public class JFrameTest extends JFrame {
 	
 	JLabel text;
+	JLabel text2;
 	JButton button;
 	JFrame frame;
 	
@@ -13,7 +14,7 @@ public class JFrameTest extends JFrame {
 		//Window's Properties
 		frame = new JFrame ();
 		frame.setVisible(true);
-		frame.setSize(200,150);
+		frame.setSize(200,200);
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(true);
@@ -24,6 +25,10 @@ public class JFrameTest extends JFrame {
 		text = new JLabel ("Hello Warpgate");
 		text.setBounds(16, 10, 200, 25);
 		frame.add(text);
+		text2 = new JLabel("You did it!");
+		text2.setBounds(16, 65, 200, 25);
+		text2.setVisible(false);
+		frame.add(text2);
 		
 		//Button's Properties
 		button = new JButton ("Try It!");
@@ -43,7 +48,9 @@ public class JFrameTest extends JFrame {
 		
 		//Button's Action
 		public void buttonTryClicked() {
-			JOptionPane.showMessageDialog(null, "Congrats!! You tried!!", "Weeeeh!!", JOptionPane.OK_CANCEL_OPTION);
+			//JOptionPane.showMessageDialog(null, "Congrats!! You tried!!", "Weeeeh!!", JOptionPane.OK_CANCEL_OPTION);
+			text2.setVisible(true);
+			
 		}
 	
 	public static void main(String[] args){
