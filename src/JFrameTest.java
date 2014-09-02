@@ -1,26 +1,33 @@
+import java.awt.Dimension;
+
 import javax.swing.*;
 
 //Fenster, das absolut nichts kann
 public class JFrameTest extends JFrame {
+	
 	JLabel text;
 	JButton button;
+	JFrame frame;
 	public JFrameTest(){
 		//Window's Properties
-		setVisible(true);
-		setSize(600,400);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLocationRelativeTo(null);//alternativ setLocation(X,Y);
-		setResizable(false);
+		frame = new JFrame ();
+		frame.setVisible(true);
+		frame.setSize(600,400);
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.setResizable(true);
+		frame.setLayout(null);
 		
 		//Text's Properties
 		text = new JLabel ("Hello Warpgate");
-		text.setLocation(10, 10);
-		add(text);
+		text.setBounds(100, 100, 200, 25);
+		frame.add(text);
 		
 		//Button's Properties
 		button = new JButton ("Try It!");
-		button.setBounds(10, 10, 100, 25);
-		add(button);
+		button.setLocation(10, 10);
+		button.setSize(new Dimension(100, 25));
+		frame.add(button);
 		
 	}
 	
