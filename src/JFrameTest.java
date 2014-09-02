@@ -12,7 +12,7 @@ public class JFrameTest extends JFrame {
 		//Window's Properties
 		frame = new JFrame ();
 		frame.setVisible(true);
-		frame.setSize(600,400);
+		frame.setSize(200,150);
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(true);
@@ -20,12 +20,12 @@ public class JFrameTest extends JFrame {
 		
 		//Text's Properties
 		text = new JLabel ("Hello Warpgate");
-		text.setBounds(100, 100, 200, 25);
+		text.setBounds(16, 10, 200, 25);
 		frame.add(text);
 		
 		//Button's Properties
 		button = new JButton ("Try It!");
-		button.setLocation(10, 10);
+		button.setLocation(10, 40);
 		button.setSize(new Dimension(100, 25));
 		frame.add(button);
 		
