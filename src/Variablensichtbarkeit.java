@@ -3,7 +3,7 @@
 	 * This is a simple implementation for logging. It contains functionality to log
 	 * messages of different severity, and to change the level dynamically.
 	 */
-	public class Log {
+	public class Variablensichtbarkeit {
 		
 		public enum Level {
 			// TODO add the levels.
@@ -81,7 +81,7 @@
 
 		/* ----- */
 		
-		private Log() {
+		private Variablensichtbarkeit() {
 			// Don't allow instances of this class.
 		}
 	}
