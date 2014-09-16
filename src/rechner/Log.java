@@ -5,7 +5,7 @@ public class Log {
 	public static void main(String[] args) {
 		System.out.println("Hello");
 		System.err.println("Error Test");
-		test(5);
+		test(4);
 	}
 	
 	public static int test(int x) {

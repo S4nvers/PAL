@@ -1,8 +1,10 @@
+package ch.ksimlee.it.PAL;
 import java.awt.Dimension;
 import java.awt.event.*;
+
 import javax.swing.*;
 
-//Fenster, das absolut nichts kann
+//Fenster mit Knopf
 public class JFrameTest extends JFrame {
 	
 	JLabel text;
@@ -14,7 +16,7 @@ public class JFrameTest extends JFrame {
 		//Window's Properties
 		frame = new JFrame ();
 		frame.setVisible(true);
-		frame.setSize(200,200);
+		frame.setSize(1000,600);
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(true);
@@ -30,6 +32,15 @@ public class JFrameTest extends JFrame {
 		text2.setVisible(false);
 		frame.add(text2);
 		
+		//Drop Down Box
+		String[] calcStrings = {"x+y", "x-y", "x*y", "x/y" };
+		JComboBox calcList = new JComboBox(calcStrings);
+		calcList.setSelectedIndex(1);
+		//calcList.addActionListener(this);
+		calcList.setSize(100, 100);
+		calcList.setLocation(100, 100);
+		frame.add(calcList);
+		
 		//Button's Properties
 		button = new JButton ("Try It!");
 		button.setLocation(10, 40);
@@ -39,19 +50,30 @@ public class JFrameTest extends JFrame {
 		//Button's Listener
 		button.addActionListener(new ActionListener() {
 
-				public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent arg0) {
 					buttonTryClicked();
-				}
+			}
 			
-			});
-		}
+		});
 		
-		//Button's Action
-		public void buttonTryClicked() {
-			//JOptionPane.showMessageDialog(null, "Congrats!! You tried!!", "Weeeeh!!", JOptionPane.OK_CANCEL_OPTION);
-			text2.setVisible(true);
+		//Drop's Listener
+		calcList.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+					JComboBox cb = (JComboBox)e.getSource();
+					String calcName = (String)cb.getSelectedItem();
+					
+			}
 			
-		}
+		});
+	}
+		
+	
+		//Button's Action
+	public void buttonTryClicked() {
+		//JOptionPane.showMessageDialog(null, "Congrats!! You tried!!", "Weeeeh!!", JOptionPane.OK_CANCEL_OPTION);
+		text2.setVisible(true);
+	}
 	
 	public static void main(String[] args){
 		new JFrameTest();
