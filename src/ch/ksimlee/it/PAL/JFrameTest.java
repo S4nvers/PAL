@@ -59,17 +59,24 @@ public class JFrameTest extends JFrame {
 		//Drop's Listener
 		calcList.addActionListener(new ActionListener() {
 
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent e) {
 					JComboBox cb = (JComboBox)e.getSource();
 					String calcName = (String)cb.getSelectedItem();
-					
+					updateLabel(calcName);
 			}
 			
 		});
+		
 	}
 		
 	
-		//Button's Action
+	protected void updateLabel(String calcName) {
+		text.setText(calcName);
+		
+	}
+
+
+	//Button's Action
 	public void buttonTryClicked() {
 		//JOptionPane.showMessageDialog(null, "Congrats!! You tried!!", "Weeeeh!!", JOptionPane.OK_CANCEL_OPTION);
 		text2.setVisible(true);
