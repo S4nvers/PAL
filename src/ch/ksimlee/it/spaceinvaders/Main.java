@@ -1,4 +1,4 @@
-package ch.ksimlee.it.PAL;
+package ch.ksimlee.it.spaceinvaders;
 
 import java.awt.EventQueue;
 
