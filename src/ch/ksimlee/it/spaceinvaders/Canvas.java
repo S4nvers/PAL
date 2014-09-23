@@ -66,9 +66,12 @@ public class Canvas extends JPanel {
 		// Draw a rectangle with the size of the canvas. Therefore, this draws a
 		// "background".
 		g.fillRect(0, 0, SIZE.width, SIZE.height);
-
-		// TODO: Add more drawing commands here.
-
 	}
-
+		// TODO: Add more drawing commands here.
+		public void paint( Graphics g ){
+			g.setColor(Color.orange);
+			g.fillOval(50, 50, 60, 40);
+			g.drawOval(200, 200, 60, 40);
+	}
+	
 }
