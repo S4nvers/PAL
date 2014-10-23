@@ -13,8 +13,9 @@ public class Timer {
 			} catch(InterruptedException ex) {
 			    Thread.currentThread().interrupt();
 			}
-			System.out.println(TimerTime);
-			
+			//System.out.println(TimerTime);
+			//int getTimerTime() {
+				//return TimerTime;
 		}
 		
 

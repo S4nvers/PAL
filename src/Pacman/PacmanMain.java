@@ -3,24 +3,30 @@ import java.awt.*;
 import javax.swing.*;
 
 public class PacmanMain {
-	JFrame frame;
-	JPanel panel;
-	Container background;
+	public static String TimeText;
 	
+	public static JFrame frame;
+	public JPanel panel;
+	Container background;
+	public JLabel lbtimer;
+	
+	
+	//Generating window Menu
 	public PacmanMain(){
 		frame = new JFrame ();
 		frame.setSize(1000,600);
-		//frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
-		frame.setResizable(false);
+		frame.setResizable(true);
 		frame.setLayout(null);
 		frame.setTitle("Menu");
 		frame.setVisible(true);
 	
 		//background = frame.getBackground();
+		
+		frame.add(frame);
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new PacmanMain();
 		new Timer();
 	}
