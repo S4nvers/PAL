@@ -1,5 +1,6 @@
 package Pacman;
 import java.awt.*;
+
 import javax.swing.*;
 
 import ch.ksimlee.it.spaceinvaders.log.Log;
@@ -11,12 +12,14 @@ public class PacmanMain {
 	public JPanel panel;
 	Container background;
 	public static JLabel lbtimer;
+	JButton playbt;
+	
 	
 	
 	//Generating window Menu
 	public PacmanMain(){
 		frame = new JFrame ();
-		frame.setSize(1000,600);
+		frame.setSize(1000,599);
 		frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(true);
@@ -36,10 +39,20 @@ public class PacmanMain {
 		frame.add(lbtimer);
 		
 		Log.info("Label Timer added");
+		
+		//Generating Play-Button
+		playbt = new JButton ("Play");
+		playbt.setLocation(10,300);
+		playbt.setSize(new Dimension(100, 25));
+		frame.add(playbt);
+		
 	}
 	public static void main(String[] args) {
 		new PacmanMain();
+		frame.setSize(1000,600);
 		new Timer();
+		//new Button(test, "Play", 10, 300, 100, 25);
+
 	}
 
 }
