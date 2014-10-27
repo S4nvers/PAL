@@ -2,10 +2,12 @@ package Pacman;
 
 public class Timer {
 	public static int TimerTime;
+	public static int Mochatim = 1;
 	public static boolean GameRunning = true;
 	public static int Modi = 0;
 	public static int level = 1;
-	public static int Mochatim = 1;
+
+
 	public Timer() {
 		TimerTime = 0;
 		while (GameRunning == true){
@@ -52,34 +54,39 @@ public class Timer {
 							Modi = 0;
 							TimerTime = -1;
 							Mochatim = Mochatim + 1;
+						}
 					}
 					else if(Mochatim == 5){
 						if(TimerTime == 5){
 							Modi = 1;
 							TimerTime = -1;
 							Mochatim = Mochatim + 1;
+						}
 					}
 					else if(Mochatim == 6){
 						if(TimerTime == 20){
 							Modi = 0;
 							TimerTime = -1;
 							Mochatim = Mochatim + 1;
+						}
 					}
 					else if(Mochatim == 7){
 						if(TimerTime == 5){
 							Modi = 1;
 							TimerTime = -1;
 							Mochatim = Mochatim + 1;
+						}
 					}
 					else if(Mochatim == 8){
 						if(TimerTime == -2){
 							Modi = 1;
 							TimerTime = -1;
 							Mochatim = Mochatim + 1;
+						}
 					}
 				}
-			}
-		
+			
+		}
 		
 
 	}
