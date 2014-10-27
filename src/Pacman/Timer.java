@@ -15,6 +15,9 @@ public class Timer {
 			}
 			PacmanMain.TimeText = Integer.toString(TimerTime);
 			PacmanMain.lbtimer.setText(PacmanMain.TimeText);
+			
+			PacmanMain.ModiText = Integer.toString(Modi);
+			PacmanMain.lbmodi.setText(PacmanMain.ModiText);
 		}
 		
 
