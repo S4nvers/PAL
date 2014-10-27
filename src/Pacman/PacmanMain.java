@@ -79,7 +79,6 @@ public class PacmanMain {
 		new PacmanMain();
 		frame.setSize(1000,600);
 		new Timer();
-		new GhostModiTimer();
 		//new Button(test, "Play", 10, 300, 100, 25);
 
 	}
