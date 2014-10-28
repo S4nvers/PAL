@@ -13,7 +13,7 @@ public class PacmanMain {
 	public static String ModiText = "0";
 	
 	public static JFrame frame;
-	public JPanel panel1;
+	public ImagePanel panel1;
 	Container background;
 	public static JLabel lbtimer;
 	public static JLabel lblevel;
@@ -24,10 +24,10 @@ public class PacmanMain {
 	
 	//Generating window Menu
 	public PacmanMain(){
-		ImagePanel panel = new ImagePanel(new ImageIcon("Background_Menu.jpg").getImage());
+		panel1 = new ImagePanel(new ImageIcon("Background_Menu.jpg").getImage());
 		
 		frame = new JFrame ();
-		frame.getContentPane().add(panel);
+		frame.getContentPane().add(panel1);
 		frame.pack();
 		frame.setSize(1000,599);
 		frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,13 +38,12 @@ public class PacmanMain {
 		frame.setVisible(true);
 		
 		Log.info("Window generated");
-	
-		//background = frame.getBackground();
 		
 		//Generating TimerLabel
 		lbtimer = new JLabel ();
 		lbtimer.setBounds(16, 10, 200, 25);
 		lbtimer.setText(TimeText);
+		lbtimer.setForeground(Color.red);
 		lbtimer.setVisible(true);
 		frame.add(lbtimer);
 		
@@ -54,6 +53,7 @@ public class PacmanMain {
 		lblevel = new JLabel ();
 		lblevel.setBounds(160,10,200,25);
 		lblevel.setText(levelText);
+		lblevel.setForeground(Color.red);
 		lblevel.setVisible(true);
 		frame.add(lblevel);
 		
@@ -61,6 +61,7 @@ public class PacmanMain {
 		lbmodi = new JLabel ();
 		lbmodi.setBounds(304, 10, 200, 25);
 		lbmodi.setText(ModiText);
+		lbmodi.setForeground(Color.red);
 		lbmodi.setVisible(true);
 		frame.add(lbmodi);
 		
