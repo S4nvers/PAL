@@ -13,7 +13,7 @@ public class PacmanMain {
 	public static String ModiText = "0";
 	
 	public static JFrame frame;
-	public ImagePanel panel1;
+	public ImagePanel panelBackground;
 	Container background;
 	public static JLabel lbtimer;
 	public static JLabel lblevel;
@@ -24,10 +24,10 @@ public class PacmanMain {
 	
 	//Generating window Menu
 	public PacmanMain(){
-		panel1 = new ImagePanel(new ImageIcon("Background_Menu.jpg").getImage());
+		panelBackground = new ImagePanel(new ImageIcon("Background_Menu.jpg").getImage());
 		
 		frame = new JFrame ();
-		frame.getContentPane().add(panel1);
+		frame.getContentPane().add(panelBackground);
 		frame.pack();
 		frame.setSize(1000,599);
 		frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
