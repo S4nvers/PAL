@@ -18,8 +18,10 @@ public class PacmanMain {
 	public static JLabel lbtimer;
 	public static JLabel lblevel;
 	public static JLabel lbmodi;
-	JButton playbt;
-	
+	static JButton playbt;
+	static JButton optbt;
+	static JButton extbt;
+	Font font = new Font("Arial Black", Font.BOLD, 21);
 	
 	
 	//Generating window Menu
@@ -45,7 +47,7 @@ public class PacmanMain {
 		lbtimer.setText(TimeText);
 		lbtimer.setForeground(Color.red);
 		lbtimer.setVisible(true);
-		frame.add(lbtimer);
+		panelBackground.add(lbtimer);
 		
 		Log.info("Label Timer added");
 		
@@ -55,7 +57,7 @@ public class PacmanMain {
 		lblevel.setText(levelText);
 		lblevel.setForeground(Color.red);
 		lblevel.setVisible(true);
-		frame.add(lblevel);
+		panelBackground.add(lblevel);
 		
 		//Generating ModiLabel
 		lbmodi = new JLabel ();
@@ -63,13 +65,29 @@ public class PacmanMain {
 		lbmodi.setText(ModiText);
 		lbmodi.setForeground(Color.red);
 		lbmodi.setVisible(true);
-		frame.add(lbmodi);
+		panelBackground.add(lbmodi);
 		
 		
 		//Generating Play-Button
 		playbt = new JButton ("Play");
-		playbt.setLocation(10,300);
-		playbt.setSize(new Dimension(100, 25));
+		playbt.setLocation(400,50);
+		playbt.setSize(new Dimension(200, 60));
+		playbt.setOpaque(false);
+		playbt.setContentAreaFilled(false);
+		playbt.setBorderPainted(false);
+		playbt.setFont(font);
+		playbt.setForeground(Color.YELLOW);
+		
+		playbt.addMouseListener(new java.awt.event.MouseAdapter() {
+		    public void mouseEntered(java.awt.event.MouseEvent evt) {
+		        playbt.setForeground(Color.RED);
+		    }
+
+		    public void mouseExited(java.awt.event.MouseEvent evt) {
+		        playbt.setForeground(Color.YELLOW);
+		    }
+		});
+		
 		playbt.addActionListener(new ActionListener() {
 
 			public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -77,14 +95,71 @@ public class PacmanMain {
 			}
 			
 		});
-		frame.add(playbt);
+		panelBackground.add(playbt);
+		
+		//Generating Options-Button
+		optbt = new JButton ("Options");
+		optbt.setLocation(400,125);
+		optbt.setSize(new Dimension(200, 60));
+		optbt.setOpaque(false);
+		optbt.setContentAreaFilled(false);
+		optbt.setBorderPainted(false);
+		optbt.setFont(font);
+		optbt.setForeground(Color.YELLOW);
+		
+		optbt.addMouseListener(new java.awt.event.MouseAdapter() {
+		    public void mouseEntered(java.awt.event.MouseEvent evt) {
+		    	optbt.setForeground(Color.RED);
+		    }
 
+		    public void mouseExited(java.awt.event.MouseEvent evt) {
+		    	optbt.setForeground(Color.YELLOW);
+		    }
+		});
+		
+		optbt.addActionListener(new ActionListener() {
+
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+					buttonTryClicked();
+			}
+			
+		});
+		panelBackground.add(optbt);
+		
+		//Generating Exit-Button
+		extbt = new JButton ("Exit");
+		extbt.setLocation(400,450);
+		extbt.setSize(new Dimension(200, 60));
+		extbt.setOpaque(false);
+		extbt.setContentAreaFilled(false);
+		extbt.setBorderPainted(false);
+		extbt.setFont(font);
+		extbt.setForeground(Color.YELLOW);
+		
+		extbt.addMouseListener(new java.awt.event.MouseAdapter() {
+		    public void mouseEntered(java.awt.event.MouseEvent evt) {
+		    	extbt.setForeground(Color.RED);
+		    }
+
+		    public void mouseExited(java.awt.event.MouseEvent evt) {
+		    	extbt.setForeground(Color.YELLOW);
+		    }
+		});
+		
+		extbt.addActionListener(new ActionListener() {
+
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+					System.exit(0);
+			}
+			
+		});
+		panelBackground.add(extbt);
 	}
 	public static void main(String[] args) {
 		new PacmanMain();
 		frame.setSize(1000,600);
 		new Timer();
-		//new Button(test, "Play", 10, 300, 100, 25);
+
 
 	}
 	public void buttonTryClicked() {
