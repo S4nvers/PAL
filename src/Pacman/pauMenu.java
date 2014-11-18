@@ -1,18 +1,21 @@
 package Pacman;
-import java.awt.*;
+
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionListener;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
-//import ch.ksimlee.it.PAL.ActionEvent;
 import ch.ksimlee.it.spaceinvaders.log.Log;
 
-public class PacmanMain {
-	public static String TimeText = "0";
-	public static String levelText = "1";
-	public static String ModiText = "0";
+public class pauMenu {
 	
-	public static JFrame frame;
+	public static JFrame pauFrame;
 	public ImagePanel panelBackground;
 	Container background;
 	public static JLabel lbtimer;
@@ -25,51 +28,24 @@ public class PacmanMain {
 	
 	
 	//Generating window Menu
-	public PacmanMain(){
+	public pauMenu(){
 		panelBackground = new ImagePanel(new ImageIcon("Background_Menu.jpg").getImage());
 		
-		frame = new JFrame ();
-		frame.getContentPane().add(panelBackground);
-		frame.pack();
-		frame.setSize(1000,599);
-		frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-		frame.setLocationRelativeTo(null);
-		frame.setResizable(false);
-		frame.setLayout(null);
-		frame.setTitle("Menu");
-		frame.setVisible(true);
+		pauFrame = new JFrame ();
+		pauFrame.getContentPane().add(panelBackground);
+		pauFrame.pack();
+		pauFrame.setSize(1000,599);
+		pauFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+		pauFrame.setLocationRelativeTo(null);
+		pauFrame.setResizable(false);
+		pauFrame.setLayout(null);
+		pauFrame.setTitle("Menu");
+		pauFrame.setVisible(false);
 		
 		Log.info("Window generated");
 		
-		//Generating TimerLabel
-		lbtimer = new JLabel ();
-		lbtimer.setBounds(16, 10, 200, 25);
-		lbtimer.setText(TimeText);
-		lbtimer.setForeground(Color.red);
-		lbtimer.setVisible(true);
-		panelBackground.add(lbtimer);
-		
-		Log.info("Label Timer added");
-		
-		//Generating LevelLabel
-		lblevel = new JLabel ();
-		lblevel.setBounds(160,10,200,25);
-		lblevel.setText(levelText);
-		lblevel.setForeground(Color.red);
-		lblevel.setVisible(true);
-		panelBackground.add(lblevel);
-		
-		//Generating ModiLabel
-		lbmodi = new JLabel ();
-		lbmodi.setBounds(304, 10, 200, 25);
-		lbmodi.setText(ModiText);
-		lbmodi.setForeground(Color.red);
-		lbmodi.setVisible(true);
-		panelBackground.add(lbmodi);
-		
-		
-		//Generating Play-Button
-		playbt = new JButton ("Play");
+		//Generating Resume-Button
+		playbt = new JButton ("Resume");
 		playbt.setLocation(400,50);
 		playbt.setSize(new Dimension(200, 60));
 		playbt.setOpaque(false);
@@ -155,20 +131,16 @@ public class PacmanMain {
 		});
 		panelBackground.add(extbt);
 	}
+	
+	protected void buttonTryClicked() {
+		pauFrame.setVisible(false);
+		PacmanGame.gameframe.setVisible(true);
+		
+	}
+
 	public static void main(String[] args) {
-		new PacmanMain();
-		new soundTest();
-		frame.setSize(1000,600);
-		new Timer();
-
+		// TODO Auto-generated method stub
 
 	}
-	public void buttonTryClicked() {
-		PacmanGame.gameframe();
-		frame.setVisible(false);
-		//JOptionPane.showMessageDialog(null, "Congrats!! You tried!!", "Weeeeh!!", JOptionPane.OK_CANCEL_OPTION);
-		//Timer.TimerTime = 0;
-	}
+
 }
-
-//Java Anleitung http://www.java-forum.org/awt-swing-javafx-and-swt/104286-hintergrundbild-jframe.html

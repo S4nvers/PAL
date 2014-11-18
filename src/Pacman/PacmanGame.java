@@ -1,13 +1,18 @@
 package Pacman;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 import javax.swing.*;
 
-public class PacmanGame {
+public class PacmanGame implements KeyListener {
 
+	int keycode;
 	public static JFrame gameframe;
 	public JPanel map;
 
 	public PacmanGame(){
+		new pauMenu();
 		gameframe = new JFrame();
 		gameframe.setSize(1000,599);
 		gameframe.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -16,11 +21,39 @@ public class PacmanGame {
 		gameframe.setLayout(null);
 		gameframe.setTitle("Pacman");
 		gameframe.setVisible(true);
+		gameframe.addKeyListener(new KeyListener() {
+			public void keyPressed(java.awt.event.ActionEvent e) {
+		}
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.getKeyCode() == KeyEvent.VK_ESCAPE){
+					gameframe.setVisible(false);
+					PauseMenu();
+				}
+			}
+
+			private void PauseMenu() {
+				Timer.GameRunning = false;
+				pauMenu.pauFrame.setVisible(true);
+				
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}});
 	}
 	
 	public static void main(String[] args) {
 		
-
 	}
 
 	public static void gameframe() {
