@@ -164,10 +164,9 @@ public class PacmanMain {
 
 	}
 	public void buttonTryClicked() {
-		PacmanGame.gameframe();
+		//PacmanGame.gameframe();
 		frame.setVisible(false);
-		//JOptionPane.showMessageDialog(null, "Congrats!! You tried!!", "Weeeeh!!", JOptionPane.OK_CANCEL_OPTION);
-		//Timer.TimerTime = 0;
+		Loading.Load();
 	}
 }
 
