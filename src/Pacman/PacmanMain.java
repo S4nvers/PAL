@@ -157,7 +157,7 @@ public class PacmanMain {
 	}
 	public static void main(String[] args) {
 		new PacmanMain();
-		new soundTest();
+		new Sound(Sound.Music).play();
 		frame.setSize(1000,600);
 		new Timer();
 
