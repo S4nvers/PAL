@@ -10,17 +10,21 @@ public class PacmanGame implements KeyListener {
 	int keycode;
 	public static JFrame gameframe;
 	public JPanel map;
+	public ImagePanel panelBackground;
 
 	public PacmanGame(){
 		new pauMenu();
 		gameframe = new JFrame();
-		gameframe.setSize(1000,599);
+		gameframe.setSize(1200,999);
 		gameframe.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 		gameframe.setLocationRelativeTo(null);
 		gameframe.setResizable(false);
 		gameframe.setLayout(null);
 		gameframe.setTitle("Pacman");
 		gameframe.setVisible(true);
+		panelBackground = new ImagePanel(new ImageIcon("PacmanMap.png").getImage());
+		gameframe.getContentPane().add(panelBackground);
+		gameframe.pack();
 		gameframe.addKeyListener(new KeyListener() {
 			public void keyPressed(java.awt.event.ActionEvent e) {
 		}
@@ -59,7 +63,25 @@ public class PacmanGame implements KeyListener {
 	public static void gameframe() {
 		// TODO Auto-generated method stub
 		new PacmanGame();
-		gameframe.setSize(1000,600);
+		gameframe.setSize(1000,1000);
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

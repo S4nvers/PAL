@@ -164,9 +164,8 @@ public class PacmanMain {
 
 	}
 	public void buttonTryClicked() {
-		//PacmanGame.gameframe();
+		PacmanGame.gameframe();
 		frame.setVisible(false);
-		Loading.Load();
 	}
 }
 
