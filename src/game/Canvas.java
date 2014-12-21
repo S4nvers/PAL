@@ -1,4 +1,4 @@
-package Pacman;
+package game;
 
 public class Canvas {
 

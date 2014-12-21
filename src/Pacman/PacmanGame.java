@@ -2,7 +2,7 @@ package Pacman;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
+import java.awt.*;
 import javax.swing.*;
 
 public class PacmanGame implements KeyListener {
@@ -18,11 +18,11 @@ public class PacmanGame implements KeyListener {
 		gameframe.setSize(1200,999);
 		gameframe.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 		gameframe.setLocationRelativeTo(null);
-		gameframe.setResizable(false);
+		gameframe.setResizable(true);
 		gameframe.setLayout(null);
 		gameframe.setTitle("Pacman");
 		gameframe.setVisible(true);
-		panelBackground = new ImagePanel(new ImageIcon("PacmanMap.png").getImage());
+		panelBackground = new ImagePanel(new ImageIcon("PacmanMapMitHintergrund.png").getImage());
 		gameframe.getContentPane().add(panelBackground);
 		gameframe.pack();
 		gameframe.addKeyListener(new KeyListener() {
@@ -64,6 +64,7 @@ public class PacmanGame implements KeyListener {
 		// TODO Auto-generated method stub
 		new PacmanGame();
 		gameframe.setSize(1000,1000);
+		
 	}
 
 	@Override

@@ -1,5 +1,8 @@
 package objects;
 
+import game.Canvas;
+import game.Game;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.HashSet;
@@ -7,8 +10,6 @@ import java.util.Set;
 
 import ch.ksimlee.it.spaceinvaders.log.Log;
 import objects.RenderObjects;
-import Pacman.Canvas;
-import Pacman.Game;
 
 public abstract class RenderObjects implements Comparable<RenderObjects>{
 	
@@ -28,7 +29,7 @@ public abstract class RenderObjects implements Comparable<RenderObjects>{
 		this.Collision = Collision;
 	}
 	
-	public static void update(Game game) {
+	public void update(Game game) {
 		
 	}
 	
