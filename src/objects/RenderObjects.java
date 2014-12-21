@@ -8,6 +8,7 @@ import java.util.Set;
 import ch.ksimlee.it.spaceinvaders.log.Log;
 import objects.RenderObjects;
 import Pacman.Canvas;
+import Pacman.Game;
 
 public abstract class RenderObjects implements Comparable<RenderObjects>{
 	
