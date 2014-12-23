@@ -3,17 +3,14 @@ package Pacman;
 import java.awt.*;
 
 public class MapSquare {
-	int x;
-	int y;
-	int w;
-	int h;
+	int X;
+	int Y;
+	int W;
+	int H;
 	
-	public MapSquare (int x, int y, int w, int h, Graphics g){
-		this.x = x;
-		this.y = y;
-		this.w = w;
-		this.h = h;
+	public static void MapSquare (int x, int y, int w, int h, Graphics g){
 		g.setColor(Color.red);
-		g.fillRect( x, y, w, h );
+		g.fillRect( x, y, w, h);
 	}
+
 }

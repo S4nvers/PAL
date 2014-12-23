@@ -25,6 +25,6 @@ public class ImagePanel extends JPanel {
 
 	public void paintComponent(Graphics g) {
 	    g.drawImage(img, 0, 0, null);
-	    MapSquare.MapSquare(0,0,1000,25,g); //not working yet... don't know why
+	    MapSquare.MapSquare(0,0,1000,25,g);
 	}
 }
