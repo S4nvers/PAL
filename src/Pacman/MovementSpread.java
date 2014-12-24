@@ -1,4 +1,4 @@
-package Pacman;
+package pacman;
 
 public class MovementSpread extends Movement {
 

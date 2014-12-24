@@ -1,9 +1,9 @@
-package Pacman;
+package pacman;
 
 public class Timer {
 	public static int TimerTime;
 	public static int Mochatim = 1;
-	public static boolean GameRunning = true;
+	public static boolean GameRunning = false;
 	public static int Modi = 0;
 	public static int level = 1;
 

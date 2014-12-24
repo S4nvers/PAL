@@ -1,4 +1,4 @@
-package Pacman;
+package pacman;
 import javax.swing.*;
 
 import java.awt.*;
@@ -25,6 +25,9 @@ public class ImagePanel extends JPanel {
 
 	public void paintComponent(Graphics g) {
 	    g.drawImage(img, 0, 0, null);
-	    MapSquare.MapSquare(0,0,1000,25,g);
+	    if (Timer.GameRunning == true){
+	    	MapSquare.MapSquare(0,0,1000,25,g);
+	    	MapSquare.MapSquare(0, 0, 25, 1000, g);
+	    }
 	}
 }

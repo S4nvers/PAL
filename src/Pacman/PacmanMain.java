@@ -1,4 +1,4 @@
-package Pacman;
+package pacman;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
@@ -91,7 +91,7 @@ public class PacmanMain {
 		playbt.addActionListener(new ActionListener() {
 
 			public void actionPerformed(java.awt.event.ActionEvent e) {
-					buttonTryClicked();
+					buttonPlayClicked();
 			}
 			
 		});
@@ -120,7 +120,7 @@ public class PacmanMain {
 		optbt.addActionListener(new ActionListener() {
 
 			public void actionPerformed(java.awt.event.ActionEvent e) {
-					buttonTryClicked();
+					buttonOptClicked();
 			}
 			
 		});
@@ -163,9 +163,14 @@ public class PacmanMain {
 
 
 	}
-	public void buttonTryClicked() {
+	public void buttonPlayClicked() {
 		PacmanGame.gameframe();
+		Timer.GameRunning = true;
 		frame.setVisible(false);
+	}
+	
+	public void buttonOptClicked() {
+		//options-button
 	}
 }
 

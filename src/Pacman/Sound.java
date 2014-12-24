@@ -1,4 +1,4 @@
-package Pacman;
+package pacman;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
